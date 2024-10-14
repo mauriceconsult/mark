@@ -2,6 +2,7 @@
 import { MenuContext } from "@/context/MenuContext";
 import React, { useContext } from "react";
 import { FaBars } from "react-icons/fa";
+import UserSelectBox from "./UserSelectBox";
 
 const Navbar = () => {
   const { toggle } = useContext(MenuContext);
@@ -12,7 +13,9 @@ const Navbar = () => {
         <div onClick={toggle} className="lg:hidden">
           <FaBars className="cursor-pointer" />
         </div>
-        <div>User</div>
+        <div>
+          <UserSelectBox/>
+        </div>
       </div>
     </div>
   );
